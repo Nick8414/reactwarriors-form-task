@@ -1,4 +1,5 @@
 import React from 'react'
+import classNames from 'classnames';
 
 const InputField = ({id, labelName, type, placeholder, name, value, changeEvent, error}) => {
   return(
@@ -7,7 +8,7 @@ const InputField = ({id, labelName, type, placeholder, name, value, changeEvent,
         <input
           id={id}
           type={type}
-          className={ error ? "form-control invalid-feedback-input-border" : "form-control" } 
+          className={ error ? classNames("form-control", "invalid-feedback-input-border") : classNames("form-control") } 
           placeholder={placeholder}
           name={name}
           value={value}
