@@ -7,7 +7,6 @@ import StepFinish from './StepFinish';
 import ButtonNavigation from './ButtonNavigation';
 
 import * as validators from '../helpers/validators'
-
 export default class App extends React.Component {
 
   constructor() {

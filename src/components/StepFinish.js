@@ -16,7 +16,18 @@ const StepFinish = ({avatar, firstName, lastName, email, mobile, country, city})
       <div className="col-12">
         <p><strong>Email: </strong>{email}</p>
         <p><strong>Mobile: </strong>{mobile}</p>
-        <p><strong>Location: </strong> {countries[countries.findIndex(el=> el.id === parseInt(country))].name}, {cities[city].name }</p>
+        <p><strong>Location: </strong> 
+          {
+            countries[
+              countries.findIndex(
+                el=> el.id === parseInt(country))
+            ] &&
+            countries[
+              countries.findIndex(
+                el=> el.id === parseInt(country))
+            ].name}, 
+            {cities[city] && cities[city].name}
+        </p>
       </div>
     </div>
   </React.Fragment>
